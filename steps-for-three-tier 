@@ -1,0 +1,50 @@
+###create a dynamo-db where orders would be placed###
+
+Go to the AWS DynamoDB console.
+Click on "Create table."
+Enter a table name like "ShawarmaOrders."
+Set the primary key as "order_id" with the data type "Number."
+Click on "Create."
+
+###create Lambda functions , use python boto-3 library ###
+
+- create a role for lambda and assign permissionsto the code (s3fullaccess,cloudwatchlogsfullaccess,dynamodbfullaccess)
+- create Lambda functions , use python boto-3 library and ensure u attche the role to the placeorderfxn below 
+first function should be -->>>, #GetShawarmaMenu# function(use the menu.py code) 
+second fxn should be  placeshawarmaorder fxn (Use the order-processing.py code )
+ 
+
+
+ ####Create an API in Amazon API Gateway###
+
+Go to the Amazon API Gateway console and click on "Create API."
+Choose "Rest-api" and configure the settings as needed.
+Create a new resource and name it "shawarma."
+Create two HTTP methods under the "shawarma" resource: "GET" and "POST."
+ Configure API Gateway and Deploy the API
+For the "GET" method, integrate it with the "GetShawarmaMenu" Lambda function.
+For the "POST" method, integrate it with the "PlaceShawarmaOrder" Lambda function.
+
+Ensure to enable cors at the level of the resource by clicking on actions
+
+Step 5: Deploy the API
+
+Create a new stage and deploy the API.
+Step 6: Get the API Endpoint URL
+
+After deploying the API, you will get an API endpoint URL that you can use to make requests.
+
+###create an s3 bucket for the frontend##
+
+ensure to enable static website hosting 
+
+also upload the html , css and js files.they are found in the front-end folder......
+
+
+
+
+
+
+
+
+

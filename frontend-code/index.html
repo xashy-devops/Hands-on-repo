@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Oncle Bone Shawarma </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Welcome to the Oncle Bone Sharwama </h1>
+    <div id="menu"></div>
+    <div id="order-form">
+        <h2>Place an Order</h2>
+        <label for="shawarma-type">Shawarma Type:</label>
+        <select id="shawarma-type">
+            <option value="chicken">Chicken Shawarma</option>
+            <option value="beef">Beef Shawarma</option>
+        </select>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" min="1" value="1">
+        <label for="customer-name">Customer Name:</label>
+        <input type="text" id="customer-name">
+        <button id="place-order">Place Order</button>
+    </div>
+    <div id="order-response"></div>
+    <script src="script.js"></script>
+</body>
+</html>
